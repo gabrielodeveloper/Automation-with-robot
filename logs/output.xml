@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.5 on win32)" generated="2025-10-01T13:25:45.105538" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="C:\TESTES\Automacao\tests\login.robot">
+<test id="s1-t1" name="Efetuar login com sucesso" line="15">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-10-01T13:25:46.339403" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
+<var>${headers}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-10-01T13:25:46.338200" elapsed="0.001292"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-10-01T13:25:46.340763" level="FAIL">Variable '${MAIL}' not found.</msg>
+<var>${body}</var>
+<arg>mail=${MAIL}</arg>
+<arg>password=${PASSWORD}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="FAIL" start="2025-10-01T13:25:46.340026" elapsed="0.000792">Variable '${MAIL}' not found.</status>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<arg>login</arg>
+<arg>${URL}</arg>
+<arg>verify=False</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="NOT RUN" start="2025-10-01T13:25:46.341142" elapsed="0.000027"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<var>${responseBody}</var>
+<arg>Login</arg>
+<arg>/</arg>
+<arg>json=${body}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="NOT RUN" start="2025-10-01T13:25:46.341372" elapsed="0.000022"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>$(responseBody)</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-10-01T13:25:46.341643" elapsed="0.000035"/>
+</kw>
+<doc>Cenário de autenticação do usuário com sucesso.</doc>
+<status status="FAIL" start="2025-10-01T13:25:46.336603" elapsed="0.005390">Variable '${MAIL}' not found.</status>
+</test>
+<status status="FAIL" start="2025-10-01T13:25:45.108137" elapsed="1.234575"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login" id="s1" pass="0" fail="1" skip="0">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
