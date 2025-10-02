@@ -1,0 +1,3 @@
+ENV:
+  url_api: https://api-dexter.qacoders.dev.br
+  endponit_login: /api/login

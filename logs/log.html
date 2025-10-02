@@ -5,7 +5,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="Robot Framework 7.3.2 (Python 3.13.5 on win32)" name="Generator">
+<meta content="Robot Framework 7.2.2 (Python 3.13.5 on win32)" name="Generator">
 <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAqAAAAAAAAAAAAAAAAAAAALIAAAD/AAAA4AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA4AAAAP8AAACxAAAAAAAAAKYAAAD/AAAAuwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/AAAA/wAAAKkAAAD6AAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN8AAAD/AAAA+gAAAMMAAAAAAAAAAgAAAGsAAABrAAAAawAAAGsAAABrAAAAawAAAGsAAABrAAAADAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAIsAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANEAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAAAAAAAAMgAAADIAAAAyAAAAMgAAADIAAAAyAAAAMgAAADIAAAAFAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAADwAAAB8AAAAAAAAAGAAAABcAAAAAAAAAH8AAABKAAAAAAAAAAAAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAADCAAAA/wAAACkAAADqAAAA4QAAAAAAAAD7AAAA/wAAALAAAAAGAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAIwAAAP4AAAD/AAAA/wAAAGAAAAAAAAAAAAAAAMkAAAD/AAAAigAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAAAAAAAIAAAAcAAAABkAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAA2gAAAP8AAAD7AAAAywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN4AAAD/AAAAqwAAAP8AAACvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALIAAAD/AAAAsgAAAAAAAAC5AAAA/wAAAMoAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMkAAAD/AAAAvAAAAAAAAAAAAAAAAAAAAKwAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAArQAAAAAAAAAAwAMAAIABAAAf+AAAP/wAAD/8AAAgBAAAP/wAAD/8AAA//AAAJIwAADHEAAA//AAAP/wAAB/4AACAAQAAwAMAAA==">
 <style media="all">
 :root {
@@ -724,13 +724,10 @@ function toggleSuite(suiteId) {
     toggleElement(suiteId, ['keyword', 'suite', 'test']);
 }
 function toggleTest(testId) {
+    toggleElement(testId, ['keyword']);
     var test = window.testdata.findLoaded(testId);
-    var autoExpand = test.status == "FAIL" || test.status == "SKIP";
-    var closed = $('#' + testId).children('.element-header').hasClass('closed');
-    if (autoExpand && closed)
+    if (test.status == "FAIL" || test.status == "SKIP")
         expandFailed(test);
-    else
-        toggleElement(testId, ['keyword']);
 }
 function toggleKeyword(kwId) {
     toggleElement(kwId, ['keyword']);
@@ -2074,25 +2071,25 @@ storage = function () {
 window.output = {};
 </script>
 <script type="text/javascript">
-window.output["suite"] = [1,2,3,0,[],[1,0,1787],[],[[4,0,5,[],[1,116,1670],[[0,6,7,0,8,9,10,0,[1,117,1],[[118,2,11]]],[0,6,7,0,8,12,13,0,[1,118,0],[[118,2,14]]],[0,15,16,0,17,18,0,0,[1,119,1],[[119,2,19]]],[0,20,16,0,21,22,23,0,[1,120,1666],[[1785,2,24],[1785,2,25],[1785,2,26],[1785,2,27]]],[0,28,7,0,29,23,0,0,[1,1786,0],[[1786,2,30]]]]]],[],[1,1,0,0]];
+window.output["suite"] = [1,2,3,0,[],[0,0,1235],[],[[4,0,5,[],[0,1229,5,6],[[0,7,8,0,9,10,11,0,[1,1230,1],[[1231,2,12]]],[0,7,8,0,9,13,14,0,[0,1232,1],[[1233,5,6]]],[0,15,16,0,17,18,0,0,[3,1233,0],[]],[0,19,16,0,20,21,22,0,[3,1233,0],[]],[0,23,8,0,24,25,0,0,[3,1234,0],[]]]]],[],[1,0,1,0]];
 </script>
 <script type="text/javascript">
 window.output["strings"] = [];
 </script>
 <script type="text/javascript">
-window.output["strings"] = window.output["strings"].concat(["*","*Login","*C:\\TESTES\\Automacao\\login.robot","*login.robot","*Efetuar login com sucesso","*<p>Cenário de autenticação do usuário com sucesso.\x3c/p>","*Create Dictionary","*BuiltIn","*<p>Creates and returns a dictionary based on the given <code>items\x3c/code>.\x3c/p>","*Content-Type=application/json","*&amp;{headers}","*&amp;{headers} = { Content-Type=application/json }","*mail=sysadmin@qacoders.com    password=1234@Test","*&amp;{body}","*&amp;{body} = { mail=sysadmin@qacoders.com | password=1234@Test }","*Create Session","*RequestsLibrary","*<p>Create Session: create a HTTP session to a server\x3c/p>","eNqVjcENgCAMAFch/KV/Azzdo2IREhQsSOL2ygje93K5lPd4ig+NIjB5I0Nrpc4AWOKEd8sHOszqQpc34qo26mrlYSGNVtqfgQa0Y9iJo3/MgqnSC1kRLxo=","eNptjEEOgjAQRa8yB6jUNUlXJi7deIKBjjCxdLDTEozx7trAkr97ef//SyLMHAe4kypLhKKVWsDAqC7IwNFAScGNOc/aWoszn7BkmbBHaV7Yi6ekjael6VK1dh+NhNW4z9fAUXqRJ9Pm/4eju0kkA5knkpJ3mpOstbTRQokfb3fFoHR86qkrgzvDDxJfRHw=","*POST On Session","*<p>Sends a POST request on a previously created HTTP Session.\x3c/p>","*Login    /    json=${body}    headers=${headers}","*${responseBody}","*POST Request : url=https://api-automacao.qacoders.dev.br/api/login/ \n path_url=/api/login/ \n headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '58'} \n body=b'{\"mail\": \"sysadmin@qacoders.com\", \"password\": \"1234@Test\"}' \n ","eNqNVNmOo0YUfc9XENRSS5EXwMbdOGopxltDN7htYzBE0agoyqZwsQyLMbTmY6I85EPmx1LlmUzPTJQolrDFveeec+4iv6y2FrdBRZYmBeLGXJWTh7Ass2Lc74MMd0FVpjGAIO29BzANUF70AnTu+TnL9kl6xEmf+4ErSlBWxYMkCB0uR6BIk4fVE42HCLCah9fbCYSoKLrTNCnzlHQnhKR1d5VjSnA75m5/uu1wtyyJkrL7jJJjGbKwOBiMvs5YTYZYHGQZwRCUOE36EVX7mYMhyAtUPlTloXvPSmagvEKNNOlwksRtUcZJgiTTr/FQHg9kbmlYDDgvwZEBnT4vD+67k8azJi+XJ1KSYfvemCXEVtf1XX9SGTyD77svaY1yFHTVhpXNL1lOO7v9QNv106B5eOXj4siP+RX5+Du3BrRlNoLu1t1OZoZmdjg6U9oLtf/xz49/pOw1zXELAsDBNOaKig0q/ZHv8FWBcn78yr/DAeUb3QfiPboXBAh8ASpA8gcAKHcCBR4qQkwQI4r6pyDNxwATmiuaAgQxTn75sksqSNMZKIo6zZnIjeTfiMLNKXqEleO22S6qVWk/a3uqJ1dYQZeqDXcDu38AmSrLSrPQhsfH4fIucYQRZQLXLb/k6QET5uYrDzA70ID49qGxT2fDj8u8QrS4CnDJj3995XN0xEXJhqw2bABsEFrwbfkbC8s+s0v81xY/dD5T5teTYafBsOhYJQHoHhDOAbuRvqD02Yl0OHE4lpWxdMepG4v/ttisYp+thReYNmXPQNJcza1B79Poafw/VybyH36jkHdnfixQa2V6Qsw7avTQX0K8wrq2azXRxFqhJRsZTrWRdsr29lRXehR0AM6agjRptVxfVsvd0JipketotduS0Ii11nXmstlO8PNUjwPnUljxovS2lIQswuedefaWdgMb0XJsU93MRd1iQrEYAqdm4i3am6G3FDP/pF5c52+8HPmSwDhrd2+2gaQ0HjOG142L1xdjusnBKYwCO/BQotogCaYGCecIy1MnskVgEYIe7RFY7FobK7G7V6emtZPRztPNZaCZczjwCayvTceLyJXsFopq40te5i93zNd3fs3aw1Q/ml8M6+3RcI3hYBMGj3arRZkAE5tQz2HgbLKA+nUGBYaxnYC9KXh7nXhzXaa4Oy2xW/quX3v6jvPLs2ULueIMXwoyn+knpgylxcl3SLV+XISupJxovn2OzbO/1RWq3XhOkFFPjbvfZL4kz+kv0aIUQ8lOAkc+uVsx9hzSuNv6aETa2ZidzkY0aUz2bq1HpnUaGRE8rom+u/b32T+MFwJwlMpK7NKN7YZxGrM52xHdlVi7jixvr7eib9ytPPOlDYGJwfL/84bm+GALhUaUQ0B7NaY1Bs5CoDoXs90NTQu2K8sQKR/d7QSvovnAtI6SGU1ao7WVXmN4+v1LEWfm1omF+GkyuBj7BDV5s5/Ac2IW3cp4VOK7aAd59v/5FzGfJMU=","eNqtkLtOAzEQRXu+YhSK0KyXKAViFSJFUEAX5SEaN7P2ZG3htTee2aDw9ThK+AOqeejeM4/XRu+ZMusO2+wpqB80DrNH1qtheENBvUnY+9jp9Vlcircwn801e6FqQPOFHbEecwi+nWuTYiQjPsUhpaCGczN7fH5q4CMymTHTho4jsXxijoXawD6eKPuDJwvvu916C/kqAM/QUpFAj5ZAErhUulMcfIWjpB4NJnVEk2zZX1k6qTZPFaysvZgMZSlUg0JwHVDSstQFy5JT7MIZ0J48k1WwJWpggeAyHV4mTmTgpq5vJ6lMaMWRTYaVTzXFOhQsS138GA3ZauTyA+WkD/cSuPq+HseT5b+hFjUu7wD+SnVJHn4BY3OkHg==","*${responseBody} = &lt;Response [200]&gt;","*Log","*<p>Logs the given message with the given level.\x3c/p>","*&lt;Response [200]&gt;"]);
+window.output["strings"] = window.output["strings"].concat(["*","*Login","*C:\\TESTES\\Automacao\\tests\\login.robot","*../tests/login.robot","*Efetuar login com sucesso","*<p>Cenário de autenticação do usuário com sucesso.\x3c/p>","*Variable '${MAIL}' not found.","*Create Dictionary","*BuiltIn","*<p>Creates and returns a dictionary based on the given <code>items\x3c/code>.\x3c/p>","*Content-Type=application/json","*${headers}","*${headers} = {'Content-Type': 'application/json'}","*mail=${MAIL}    password=${PASSWORD}","*${body}","*Create Session","*RequestsLibrary","*<p>Create Session: create a HTTP session to a server\x3c/p>","*login    ${URL}    verify=False","*POST On Session","*<p>Sends a POST request on a previously created HTTP Session.\x3c/p>","*Login    /    json=${body}    headers=${headers}","*${responseBody}","*Log","*<p>Logs the given message with the given level.\x3c/p>","*$(responseBody)"]);
 </script>
 <script type="text/javascript">
-window.output["stats"] = [[{"elapsed":"00:00:02","fail":0,"label":"All Tests","pass":1,"skip":0}],[],[{"elapsed":"00:00:02","fail":0,"id":"s1","label":"Login","name":"Login","pass":1,"skip":0}]];
+window.output["stats"] = [[{"elapsed":"00:00:00","fail":1,"label":"All Tests","pass":0,"skip":0}],[],[{"elapsed":"00:00:01","fail":1,"id":"s1","label":"Login","name":"Login","pass":0,"skip":0}]];
 </script>
 <script type="text/javascript">
 window.output["errors"] = [];
 </script>
 <script type="text/javascript">
-window.output["baseMillis"] = 1758573940208;
+window.output["baseMillis"] = 1759335945108;
 </script>
 <script type="text/javascript">
-window.output["generated"] = 1792;
+window.output["generated"] = 1240;
 </script>
 <script type="text/javascript">
 window.output["expand_keywords"] = null;
